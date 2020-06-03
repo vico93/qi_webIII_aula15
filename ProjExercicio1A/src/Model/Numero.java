@@ -72,6 +72,43 @@ public class Numero {
         return acum;
     }
 
+    public String verSeEParOuImpar() {
+        if (this.numero % 2 == 0) {
+            return "Par";
+        }
+        else {
+            return "Ímpar";
+        }
+    }
+
+    public String VerSeONumeroEPositivoNegativoOuNulo() {
+        if (this.numero <= 0) {
+            return "Positivo";
+        }
+        else {
+            return "Negativo";
+        }
+    }
+
+    public double calcularRaizQuadradaDoNumero() {
+        return Math.sqrt(this.numero);
+    }
+
+    public double calcularDobroDoNumero() {
+        return this.numero * 2;
+    }
+
+    // Não entendi o pq do retorno de int, pra mim tabuada seria a string inteira (ver como fica no retorno)
+    public String calcularTabuadaDoNumero() {
+        String tabuadaCompleta = "";
+
+        for (int i = 1; i < 10; i++) {
+            tabuadaCompleta += "\n" + this.numero + "x" + i + "= " + (this.numero * i);
+        }
+
+        return tabuadaCompleta;
+    }
+
     // toString
     @Override
     public String toString() {
